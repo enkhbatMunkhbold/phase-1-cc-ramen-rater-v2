@@ -47,6 +47,14 @@
       "image": "https://glebekitchen.com/wp-content/uploads/2017/04/tonkotsuramenfront-500x375.jpg",
       "rating": "9",
       "comment": "This is the best one, so delicious!"
+    },
+    {
+      "id": "f7fa",
+      "name": "Shio Ramen",
+      "restaurant": "Haya Ramen",
+      "image": "https://s3-media0.fl.yelpcdn.com/bphoto/ufgb23r87iN4tAliASOydw/o.jpg",
+      "rating": "7",
+      "comment": "Delicious ramen, prepared by real Japanese chef and real Japanese recipes.  "
     }
   ]
 }

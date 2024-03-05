@@ -1,4 +1,15 @@
 // index.js
+
+const main = () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    displayRamens()
+    addSubmitListener()
+  })  
+}
+
+main()
+
+//Selecting HTML elements
 const ramenDetail = document.querySelector('div#ramen-detail')
 const imageDetail = ramenDetail.querySelector('img')
 const ramenName = ramenDetail.querySelector('h2')
@@ -8,9 +19,7 @@ const ramenComment = document.querySelector('p#comment-display')
 const newComment = document.querySelector('textarea#new-comment')
 
 // Callbacks
-const handleClick = (img, food) => {
-  img.addEventListener('click', () => fillRamenDetail(food))
-};
+const handleClick = (img, food) => img.addEventListener('click', () => fillRamenDetail(food))
 
 const addSubmitListener = () => {
   const form = document.querySelector('form#new-ramen')
@@ -62,18 +71,10 @@ const displayRamens = () => {
   fetch('http://localhost:3000/ramens')
   .then(res => res.json())
   .then(ramens => {
-    console.log(ramens)
     fillRamenDetail(ramens[0])
     renderAllRamens(ramens)
   })
 };
-
-const main = () => {
-  displayRamens()
-  addSubmitListener()
-}
-
-main()
 
 // Export functions for testing
 export {
